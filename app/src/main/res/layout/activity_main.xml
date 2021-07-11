@@ -15,6 +15,9 @@
         android:background="#FFFFFFFF"
         android:textSize="48sp"
         android:maxLength="12"
+        android:padding="10dp"
+        android:text="0"
+        android:gravity="right|center_vertical|bottom"
         />
 
     <!-- Row 1-->
@@ -66,7 +69,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="/"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             />
 
     </LinearLayout>
@@ -120,7 +123,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="*"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             />
 
     </LinearLayout>
@@ -174,7 +177,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             />
 
     </LinearLayout>
@@ -195,7 +198,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="."
-            android:onClick="onDigit"
+            android:onClick="onDecimalPoint"
             />
 
         <Button
@@ -217,7 +220,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="CLR"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             />
 
         <Button
@@ -228,7 +231,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="+"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             />
 
     </LinearLayout>
@@ -247,7 +250,9 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="="/>
+            android:text="="
+            android:onClick="onEqual"
+            />
         </LinearLayout>
 
 </LinearLayout>
